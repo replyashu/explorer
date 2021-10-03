@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Explorer</string>
+    <string name="title_home">Home</string>
+    <string name="explorer">Explorer</string>
+    <string name="net_of_nets">Net of Nets</string>
+    <string name="activity">Activity</string>
+    <string name="post_a_job">Post a Job</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

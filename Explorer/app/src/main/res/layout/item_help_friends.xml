@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:layout_margin="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_help_friend_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/img_help_friend"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_interested_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Gabriela is interested in"
+            app:layout_constraintTop_toBottomOf="@id/iv_help_friend_photo"
+            app:layout_constraintStart_toStartOf="@id/iv_help_friend_photo"
+            app:layout_constraintEnd_toEndOf="@id/iv_help_friend_photo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sr Business Manager"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_interested_in"
+            app:layout_constraintStart_toStartOf="@id/tv_interested_in"
+            app:layout_constraintEnd_toEndOf="@id/tv_interested_in" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="London"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="@id/tv_title" />
+
+        <include
+            android:id="@+id/inc_dot_lcoation"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            layout="@layout/layout_dot"
+            app:layout_constraintStart_toEndOf="@+id/tv_location"
+            app:layout_constraintTop_toTopOf="@id/tv_location"
+            app:layout_constraintBottom_toBottomOf="@id/tv_location" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_location_offered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remotely"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/inc_dot_lcoation"
+            app:layout_constraintTop_toTopOf="@id/tv_location"
+            app:layout_constraintBottom_toBottomOf="@id/tv_location" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="€ 400 /day"
+            app:layout_constraintTop_toBottomOf="@id/tv_location"
+            app:layout_constraintStart_toStartOf="@id/tv_location" />
+
+        <include
+            android:id="@+id/inc_dot_rate"
+            layout="@layout/layout_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toEndOf="@id/tv_rate"
+            app:layout_constraintTop_toTopOf="@id/tv_rate"
+            app:layout_constraintBottom_toBottomOf="@id/tv_rate" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_rate_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="⋆ 100%"
+            app:layout_constraintStart_toEndOf="@id/inc_dot_rate"
+            app:layout_constraintTop_toTopOf="@id/tv_rate" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gp_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tv_rate, inc_dot_rate, tv_rate_star" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
